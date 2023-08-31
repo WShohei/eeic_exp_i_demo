@@ -1,0 +1,1 @@
+rec -t raw -b 16 -c 1 -e s -r 44100 - | ./js/src/clientsfu $1 $2 | play -t raw -b 16 -c 1 -e s -r 44100 -

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <script>  
+            // for electron
+            if (typeof module !== 'undefined') {  
+              window.__tempModuleExports__ = module.exports;
+              module.exports = false;
+            }
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="./js/functions.js"></script>
+        <title>NightCode</title>
+    </head>
+    <body>
+        <div id="output-area">
+            <div id="std_output-area"></div>
+            <p id="dst-info"><span>IP : ***.***.***.***</span><span>PORT : *****</span><span>周波数シフト : ***</span></p>
+        </div>
+        <div id="setting-area">
+            <div id="start_stop-area">
+                <button id="button-start">start</button>
+                <button id="button-stop">stop</button>
+            </div>
+            <div id="dst_info-area">
+                <p>
+                    <label for="input-dst_ip">通信先IPアドレス</label>
+                    <input id="input-dst_ip" type="text" placeholder="***.***.***.***"/>
+                </p>
+                <p>
+                    <label for="input-dst_port">通信先ポート</label>
+                    <input id="input-dst_port" type="number" placeholder="50000"/>
+                </p>
+                <p>
+                    <label for="input-shift_f">シフト周波数</label>
+                    <input id="input-shift_f" type="number" placeholder="0"/>
+                </p>
+                <button class="button-change" id="button-dst_info">変更</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+[package]
+name = "rust_apis"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+paillier = { version="0.2.1-alpha.0", git="https://github.com/SoraSuegami/rust-paillier.git" }
+serde_json = "1.0.81"
+c_vec = "2.0.0"
+rayon = "1.5.3"
+crossbeam = "0.8.1"
+
+[dev-dependencies]
+rand = "0.8.5"
+
+[lib]
+crate-type = ["staticlib"]
